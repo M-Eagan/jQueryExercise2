@@ -1,5 +1,11 @@
-$( document ).ready(function() {
+$(() =>{
 
+  let expandMenu = $(".responsive-menu");
+
+  expandMenu.hide();
+  $(".responsive-menu").on('click',() => {
+    expandMenu.slideToggle();
+  });
 
 	jQuery(function($){
         $('.menu-btn').click(function(){
@@ -7,13 +13,16 @@ $( document ).ready(function() {
         })
    })
 
-   $( "#numbers" ).click(function() {
-        $('#letters').hide()
+   $("#num").on('click', () => {
+        $('#letters').hide();
+        $('#numbers').css("display", "block");
+  
   });
 
-  $(".mobile-nav").click(function() {
-      $('.menu-btn').toggleClass()
-  })
+  $("#alpha").on('click', () => {
+    $('#numbers').hide();
+    $('#letters').css("display", "block");
+});
     
     });
 
